@@ -12,7 +12,10 @@ class Menu:
         """
         self.type = type
         self.keyboard = [[] for _ in range(row)]
-        self.markup = ReplyKeyboardMarkup(keyboard=self.keyboard, resize_keyboard=True) if type == 'reply' else InlineKeyboardMarkup(inline_keyboard=self.keyboard)
+        if type == 'reply':
+            self.markup = ReplyKeyboardMarkup(keyboard=self.keyboard, resize_keyboard=True)
+        elif type == 'inline':
+            self.markup = InlineKeyboardMarkup(inline_keyboard=self.keyboard)
 
     def new_button(self, text: str, row_number: int, url=None, callback_data=None):
         """
@@ -21,9 +24,10 @@ class Menu:
         """
         if self.type == 'reply':
             self.keyboard[row_number-1].append(KeyboardButton(text=text)) # -1 т к это индекс
+            self.markup = ReplyKeyboardMarkup(keyboard=self.keyboard, resize_keyboard=True)
         elif self.type == 'inline':
             self.keyboard[row_number-1].append(InlineKeyboardButton(text=text, url=url, callback_data=callback_data))
-        self.markup = ReplyKeyboardMarkup(keyboard=self.keyboard, resize_keyboard=True) if type == 'reply' else InlineKeyboardMarkup(inline_keyboard=self.keyboard)
+            self.markup = InlineKeyboardMarkup(inline_keyboard=self.keyboard)
 
     def printf(self):
         print(self.markup)
