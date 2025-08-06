@@ -2600,3 +2600,756 @@ TypeError: object bool can't be used in 'await' expression
 INFO:aiogram.dispatcher:Polling stopped
 INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
 INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583300 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583300 by bot id=7652131610
+TypeError: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 113, in trigger
+    result, data = await handler.check(event, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 90, in check
+    check = await event_filter.call(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+TypeError: object bool can't be used in 'await' expression
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583301 is handled. Duration 250 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583302 is handled. Duration 296 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583303 is handled. Duration 280 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583304 is handled. Duration 328 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583305 is handled. Duration 421 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583306 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583306 by bot id=7652131610
+TypeError: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 113, in trigger
+    result, data = await handler.check(event, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 90, in check
+    check = await event_filter.call(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+TypeError: object bool can't be used in 'await' expression
+INFO:aiogram.event:Update id=898583307 is handled. Duration 110 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583308 is handled. Duration 94 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583309 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583309 by bot id=7652131610
+TypeError: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 113, in trigger
+    result, data = await handler.check(event, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 90, in check
+    check = await event_filter.call(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+TypeError: object bool can't be used in 'await' expression
+INFO:aiogram.event:Update id=898583310 is handled. Duration 578 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 1.420615 seconds and try again... (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 1.925120 seconds and try again... (tryings = 2, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 2.518285 seconds and try again... (tryings = 3, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 3.228757 seconds and try again... (tryings = 4, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 5, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.151581 seconds and try again... (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.514665 seconds and try again... (tryings = 2, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 3, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 121] Превышен таймаут семафора
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 1.088774 seconds and try again... (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 1.416494 seconds and try again... (tryings = 2, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 1.977099 seconds and try again... (tryings = 3, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 2.546822 seconds and try again... (tryings = 4, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 5, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583311 is handled. Duration 218 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583312 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583312 by bot id=7652131610
+TypeError: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 113, in trigger
+    result, data = await handler.check(event, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 90, in check
+    check = await event_filter.call(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+TypeError: object bool can't be used in 'await' expression
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583313 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583313 by bot id=7652131610
+TypeError: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 113, in trigger
+    result, data = await handler.check(event, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 90, in check
+    check = await event_filter.call(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+TypeError: object bool can't be used in 'await' expression
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583314 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583314 by bot id=7652131610
+TypeError: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 113, in trigger
+    result, data = await handler.check(event, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 90, in check
+    check = await event_filter.call(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+TypeError: object bool can't be used in 'await' expression
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583315 is handled. Duration 15 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583316 is handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583317 is handled. Duration 203 ms by bot id=7652131610
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 1.249892 seconds and try again... (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 1.680291 seconds and try again... (tryings = 2, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 2.203517 seconds and try again... (tryings = 3, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 2.908537 seconds and try again... (tryings = 4, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 3.781519 seconds and try again... (tryings = 5, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.980400 seconds and try again... (tryings = 6, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.995069 seconds and try again... (tryings = 7, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.986221 seconds and try again... (tryings = 8, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.936185 seconds and try again... (tryings = 9, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.002567 seconds and try again... (tryings = 10, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.042366 seconds and try again... (tryings = 11, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.009740 seconds and try again... (tryings = 12, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.227205 seconds and try again... (tryings = 13, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.978876 seconds and try again... (tryings = 14, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.967442 seconds and try again... (tryings = 15, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.010403 seconds and try again... (tryings = 16, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.044330 seconds and try again... (tryings = 17, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.098823 seconds and try again... (tryings = 18, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.974591 seconds and try again... (tryings = 19, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.895382 seconds and try again... (tryings = 20, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.113721 seconds and try again... (tryings = 21, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.012447 seconds and try again... (tryings = 22, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.887457 seconds and try again... (tryings = 23, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.899290 seconds and try again... (tryings = 24, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.992888 seconds and try again... (tryings = 25, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.913930 seconds and try again... (tryings = 26, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.924026 seconds and try again... (tryings = 27, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.142005 seconds and try again... (tryings = 28, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.080393 seconds and try again... (tryings = 29, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.908124 seconds and try again... (tryings = 30, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.132561 seconds and try again... (tryings = 31, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.942539 seconds and try again... (tryings = 32, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.864005 seconds and try again... (tryings = 33, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.932053 seconds and try again... (tryings = 34, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.017674 seconds and try again... (tryings = 35, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.959444 seconds and try again... (tryings = 36, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 5.038570 seconds and try again... (tryings = 37, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+WARNING:aiogram.dispatcher:Sleep for 4.910997 seconds and try again... (tryings = 38, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 39, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.224809 seconds and try again... (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.562320 seconds and try again... (tryings = 2, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.905597 seconds and try again... (tryings = 3, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 4, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.244323 seconds and try again... (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.743541 seconds and try again... (tryings = 2, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 2.200267 seconds and try again... (tryings = 3, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 4, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.332459 seconds and try again... (tryings = 1, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 1.684474 seconds and try again... (tryings = 2, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 2.020998 seconds and try again... (tryings = 3, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 2.595363 seconds and try again... (tryings = 4, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+WARNING:aiogram.dispatcher:Sleep for 3.505357 seconds and try again... (tryings = 5, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 6, bot id = 7652131610)
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 1, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583318 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583319 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583320 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583321 is handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583322 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583323 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2706)
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583324 is handled. Duration 203 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583325 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583326 is handled. Duration 297 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583327 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583328 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583328 by bot id=7652131610
+ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\handlers\add_task.py", line 26, in add_task2
+    await message.answer('Выберите номер задания', reply_markup=...)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\types\message.py", line 2074, in answer
+    return SendMessage(
+           ^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+INFO:aiogram.event:Update id=898583329 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583329 by bot id=7652131610
+ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\handlers\add_task.py", line 26, in add_task2
+    await message.answer('Выберите номер задания', reply_markup=...)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\aiogram\types\message.py", line 2074, in answer
+    return SendMessage(
+           ^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=Ellipsis, input_type=ellipsis]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583330 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583331 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583332 is handled. Duration 218 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583333 is handled. Duration 63 ms by bot id=7652131610

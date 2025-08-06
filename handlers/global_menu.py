@@ -1,6 +1,7 @@
 from aiogram import Router, F
 from aiogram.filters import CommandStart
 from aiogram.types import Message
+from aiogram.fsm.context import FSMContext
 
 from keyboards.global_menu import global_menu_student, global_menu_first_visit, global_menu_teacher
 from filters.is_student import IsStudent
@@ -12,12 +13,14 @@ router_command_start = Router()
 
 
 @router_command_start.message(CommandStart(), IsTeacher())
-async def _start(message: Message):
+async def _start(message: Message, state: FSMContext):
+    await state.clear()
     await message.answer('Привет, отличного дня!', reply_markup=global_menu_teacher.markup)
 
 
 @router_command_start.message(CommandStart(), IsStudent())
-async def _start(message: Message):
+async def _start(message: Message, state: FSMContext):
+    await state.clear()
     await message.answer('Привет, отличного дня!', reply_markup=global_menu_student.markup)
 
 
@@ -40,5 +43,6 @@ async def _new_student(message: Message):
         await message.answer('Вы уже зарегистрированы в системе')
 
 @router_command_start.message(F.text == 'На главное меню')
-async def _new_student(message: Message):
+async def _new_student(message: Message, state: FSMContext):
+    await state.clear()
     await message.answer('Привет, отличного дня!', reply_markup=global_menu_teacher.markup)

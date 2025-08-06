@@ -10,12 +10,16 @@ from utils.get_student import GetStudent
 from keyboards.global_menu import global_menu_teacher
 
 class AddStudent(StatesGroup):
+    first = State()
+    second = State()
+    third = State()
     id_student = State()
 
 router_add_student = Router()
 
 @router_add_student.message(F.text == "Добавить ученика")
 async def _add_student1(message: Message, state: FSMContext):
+    await state.clear()
     await message.answer('Введите id ученика', reply_markup=ReplyKeyboardRemove())
     await state.set_state(AddStudent.id_student)
 

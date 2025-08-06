@@ -5,7 +5,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import Message, CallbackQuery
 
-from keyboards.choose_a_number_of_task import list_a_number_of_task
+from keyboards.choose_a_number_of_task import keyboard_list_a_number_of_task
 from filters.is_teacher import IsTeacher
 from filters.is_choose_number_task import IsChooseNumberTask
 from keyboards.task_bank import choose_next_step
@@ -17,7 +17,7 @@ class NumberTask(StatesGroup):
 
 @router_task_bank.message(F.text == 'Банк заданий', IsTeacher())
 async def task_bank(message: Message, state: FSMContext):
-    await message.answer('Это банк заданий для ЕГЭ по русскому языку. В него можно добавлять задания по определенным шаблонам', reply_markup=list_a_number_of_task.markup)
+    await message.answer('Это банк заданий для ЕГЭ по русскому языку. В него можно добавлять задания по определенным шаблонам', reply_markup=keyboard_list_a_number_of_task.markup)
     await state.set_state(NumberTask.number)
 
 @router_task_bank.message(IsChooseNumberTask())
