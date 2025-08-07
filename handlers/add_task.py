@@ -15,7 +15,7 @@ class AddTask(StatesGroup):
     third = State()
 
 
-@router_add_task.message(GlobalMenu.teacher)
+@router_add_task.message(GlobalMenu.teacher, F.text == "Добавить тест")
 async def add_task1(message: Message, state: FSMContext):
     await state.clear()
     await state.set_state(AddTask.first)

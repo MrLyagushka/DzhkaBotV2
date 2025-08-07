@@ -11,7 +11,7 @@ from handlers.global_menu import GlobalMenu
 router_profile = Router()
 
 
-@router_profile.message(GlobalMenu.student)
+@router_profile.message(GlobalMenu.student, F.text == "Профиль")
 async def profile1(message: Message):
     statistics = GetStatisticsStudent(message.from_user.id)
     if statistics.number_of_task != 0:
@@ -29,7 +29,7 @@ async def profile1(message: Message):
 Ошибок: Вы не решали задания
     """, reply_markup=global_menu_student.markup)
 
-@router_profile.message(GlobalMenu.teacher)
+@router_profile.message(GlobalMenu.teacher and F.text == "Профиль")
 async def profile2(message: Message):
     statistics = GetStatisticsTeacher(message.from_user.id)
     photo = FSInputFile('C:/Users/Олег/Pictures/tralyalya.png')

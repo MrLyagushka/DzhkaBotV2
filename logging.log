@@ -3581,3 +3581,77 @@ ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Cl
 WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
 INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
 INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583361 is handled. Duration 265 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583362 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583363 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583364 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583365 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583366 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583367 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583368 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583369 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583370 is handled. Duration 187 ms by bot id=7652131610
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 1, bot id = 7652131610)
+INFO:aiogram.event:Update id=898583371 is handled. Duration 188 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583372 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583373 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583374 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583375 is handled. Duration 94 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583376 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583377 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583378 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583379 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583380 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583381 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583382 is handled. Duration 156 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583383 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583384 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583385 is handled. Duration 94 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583386 is handled. Duration 234 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583387 is handled. Duration 110 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583388 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583389 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583390 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583391 is handled. Duration 266 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583392 is handled. Duration 140 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583393 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583394 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583395 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583396 is handled. Duration 265 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C

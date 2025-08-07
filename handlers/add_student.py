@@ -15,7 +15,7 @@ class AddStudent(StatesGroup):
 
 router_add_student = Router()
 
-@router_add_student.message(GlobalMenu.teacher)
+@router_add_student.message(GlobalMenu.teacher, F.text == "Добавить ученика")
 async def _add_student1(message: Message, state: FSMContext):
     await state.clear()
     await message.answer('Введите id ученика', reply_markup=ReplyKeyboardRemove())
@@ -31,9 +31,11 @@ async def _add_student2(message: Message, state: FSMContext):
             id_student = int((await state.get_data())['id'])
         except Exception as e:
             await message.answer('Ошибка, попробуйте еще раз', reply_markup=global_menu_teacher.markup)
+            await state.set_state(GlobalMenu.teacher)
             logging.info(f'Ошибка в функции _add_student: {e}')
             isTrue = False
     else:
+        await state.clear()
         isTrue = False
     if isTrue:
         id_teacher = message.from_user.id
@@ -43,7 +45,9 @@ async def _add_student2(message: Message, state: FSMContext):
                 Update().update_poly_student_new_student(id_student=id_student, id_teacher=id_teacher)
                 Update().update_poly_teacher_new_student(id_teacher)
                 await message.answer('Ученик успешно добавлен', reply_markup=global_menu_teacher.markup)
+                await state.set_state(GlobalMenu.teacher)
                 is_add = True
         if not is_add:
             await message.answer('Возникла ошибка, проверьте, зарегистрирован id или привязан', reply_markup=global_menu_teacher.markup)
-    await state.clear()
+            await state.set_state(GlobalMenu.teacher)
+

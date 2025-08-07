@@ -57,3 +57,4 @@ async def _new_teacher_or_student(message: Message, state: FSMContext):
 async def _new_student(message: Message, state: FSMContext):
     await state.clear()
     await message.answer('Привет, отличного дня!', reply_markup=global_menu_teacher.markup)
+    await state.set_state(GlobalMenu.teacher)
