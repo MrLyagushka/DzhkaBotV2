@@ -4,8 +4,7 @@ from aiogram.types import Message, FSInputFile
 from filters.is_student import IsStudent
 from filters.is_teacher import IsTeacher
 from keyboards.global_menu import global_menu_student
-from utils.get_statistics_student import GetStatisticsStudent
-from utils.get_statistics_teacher import GetStatisticsTeacher
+from utils.users import Teacher, Student
 from handlers.global_menu import GlobalMenu
 
 router_profile = Router()
@@ -13,7 +12,7 @@ router_profile = Router()
 
 @router_profile.message(GlobalMenu.student, F.text == "Профиль")
 async def profile1(message: Message):
-    statistics = GetStatisticsStudent(message.from_user.id)
+    statistics = Student.get_statistics(message.from_user.id)
     if statistics.number_of_task != 0:
         await message.answer(f"""
 Никнейм: тута он будет\n
@@ -31,7 +30,8 @@ async def profile1(message: Message):
 
 @router_profile.message(GlobalMenu.teacher and F.text == "Профиль")
 async def profile2(message: Message):
-    statistics = GetStatisticsTeacher(message.from_user.id)
+    statistics = Teacher()
+    statistics.get_statistics(message.from_user.id)
     photo = FSInputFile('C:/Users/Олег/Pictures/tralyalya.png')
     if statistics.number_of_students != 0:
         await message.answer_photo(photo=photo, caption=f"""

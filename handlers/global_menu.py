@@ -7,8 +7,7 @@ from aiogram.fsm.state import State, StatesGroup
 from keyboards.global_menu import global_menu_student, global_menu_first_visit, global_menu_teacher
 from filters.is_student import IsStudent
 from filters.is_teacher import IsTeacher
-from utils.new_teacher import NewTeacher
-from utils.new_student import NewStudent
+from utils.users import Teacher, Student
 
 router_command_start = Router()
 
@@ -42,12 +41,12 @@ async def _start(message: Message, state: FSMContext):
 async def _new_teacher_or_student(message: Message, state: FSMContext):
     await state.update_data(choice=message.text)
     if (await state.get_data())['choice'] == 'Я учитель':
-        if NewTeacher(message.from_user.id).check():
+        if Teacher.new_teacher(message.from_user.id).check():
             await message.answer('Вы зарегистрированы как учитель', reply_markup=global_menu_teacher.markup)
         else:
             await message.answer('Вы уже зарегистрированы в системе')
     else:
-        if NewStudent(message.from_user.id).check():
+        if Student.new_student(message.from_user.id).check():
             await message.answer('Вы зарегистрированы как ученик', reply_markup=global_menu_student.markup)
         else:
             await message.answer('Вы уже зарегистрированы в системе')

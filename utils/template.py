@@ -1,5 +1,3 @@
-# Тут я хочу описать создание любых шаблонов для ввода их репетитором. Использовать буду классы
-# Еще тут будет класс динамических клавиатур
 from typing import List
 from aiogram.filters.callback_data import CallbackData
 
@@ -18,13 +16,6 @@ class MyCallbackData(CallbackData, prefix='my'):
     column: int
     is_always_bigger: Literal['yes', 'no']
 
-# class DictInfo(TypedDict):
-#     callback_data: str
-#     first_index: int
-#     row: int
-#     column: int
-#     is_always_bigger_column_multiply_row: Literal['yes', 'no']
-#     button_list: List[DictChildrenInfo]
 
 class DinamicKeyboard():
 
@@ -59,12 +50,3 @@ class DinamicKeyboard():
                                     callback_data=MyCallbackData(callback_data='<', first_index=self.first_index, row=self.row, column=self.column, is_always_bigger= self.is_always_bigger_column_multiply_row).pack())
         dinamic_keyboard.new_button(row_number=self.row+1, text='>', callback_data=MyCallbackData(callback_data='>', first_index=self.first_index, row=self.row, column=self.column, is_always_bigger= self.is_always_bigger_column_multiply_row).pack())
         return dinamic_keyboard.markup
-
-
-# dinkeyb = DinamicKeyboard(1, 2, 'yes', 0, [{'text': 'abs', 'callback_data': 'abss'},
-#                                            {'text': 'abs', 'callback_data': 'abss'},
-#                                            {'text': 'abs', 'callback_data': 'abss'}])
-# for i in dinkeyb.generate_keyboard():
-#     for j in i:
-#         for k in j:
-#             print(k)

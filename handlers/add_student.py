@@ -6,7 +6,7 @@ from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import Message, ReplyKeyboardRemove
 
 from utils.update_all import Update
-from utils.get_student import GetStudent
+from utils.users import Student
 from keyboards.global_menu import global_menu_teacher
 from handlers.global_menu import GlobalMenu
 
@@ -15,7 +15,7 @@ class AddStudent(StatesGroup):
 
 router_add_student = Router()
 
-@router_add_student.message(GlobalMenu.teacher, F.text == "Добавить ученика")
+@router_add_student.message(GlobalMenu.teacher and F.text == "Добавить ученика")
 async def _add_student1(message: Message, state: FSMContext):
     await state.clear()
     await message.answer('Введите id ученика', reply_markup=ReplyKeyboardRemove())
@@ -40,7 +40,7 @@ async def _add_student2(message: Message, state: FSMContext):
     if isTrue:
         id_teacher = message.from_user.id
         is_add = False
-        for student in GetStudent().student:
+        for student in Student().student:
             if student[0] == id_student and student[1] == 0:
                 Update().update_poly_student_new_student(id_student=id_student, id_teacher=id_teacher)
                 Update().update_poly_teacher_new_student(id_teacher)
