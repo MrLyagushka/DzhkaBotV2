@@ -22,14 +22,14 @@ async def add_task1(message: Message, state: FSMContext):
 
 @router_add_task.message(AddTask.first)
 async def add_task2(message: Message, state: FSMContext):
-    await state.update_data(choice=message.text)
+    await state.update_data(choice1=message.text)
     await message.answer('Выберите номер задания', reply_markup=keyboard_list_a_number_of_task.markup)
     await state.set_state(AddTask.second)
 
 @router_add_task.message(AddTask.second)
 async def add_task3(message: Message, state: FSMContext):
     await state.update_data(choice2=message.text)
-    choice1 = await state.get_data()['choice1']
-    choice2 = await state.get_data()['choice2']
+    choice1 = (await state.get_data())['choice1']
+    choice2 = (await state.get_data())['choice2']
     print(choice1)
     print(choice2)

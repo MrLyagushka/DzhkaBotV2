@@ -10,9 +10,6 @@ from utils.get_student import GetStudent
 from keyboards.global_menu import global_menu_teacher
 
 class AddStudent(StatesGroup):
-    first = State()
-    second = State()
-    third = State()
     id_student = State()
 
 router_add_student = Router()
@@ -34,10 +31,8 @@ async def _add_student2(message: Message, state: FSMContext):
         except Exception as e:
             await message.answer('Ошибка, попробуйте еще раз', reply_markup=global_menu_teacher.markup)
             logging.info(f'Ошибка в функции _add_student: {e}')
-            await state.clear()
             isTrue = False
     else:
-        await state.clear()
         isTrue = False
     if isTrue:
         id_teacher = message.from_user.id
@@ -50,4 +45,4 @@ async def _add_student2(message: Message, state: FSMContext):
                 is_add = True
         if not is_add:
             await message.answer('Возникла ошибка, проверьте, зарегистрирован id или привязан', reply_markup=global_menu_teacher.markup)
-        await state.clear()
+    await state.clear()
