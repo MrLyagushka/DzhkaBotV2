@@ -17,8 +17,8 @@ class Teacher():
             cursor = db.cursor()
             cursor.execute(f"SELECT answer FROM test WHERE id_teacher = {id_teacher}")
             answer = cursor.fetchall()
-        self.number_of_task = len(answer)
-        self.correct_answer = sum(map(lambda x: x[0], answer))
+            self.number_of_task = len(answer)
+            self.correct_answer = sum(map(lambda x: x[0], answer))
 
         with connect(PATH_TO_DB_USERS) as db:
             cursor = db.cursor()

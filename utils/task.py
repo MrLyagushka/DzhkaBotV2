@@ -20,7 +20,7 @@ class Task:
             if id_task != 0:
                 cursor.execute(f"SELECT * FROM test WHERE id_task = {id_task}")
                 self.task_number_n = cursor.fetchall()
-                self.task_number_n_answer = self.task_number_n[0][index_text].split('_')[-1].split('ОТВЕТ')[1].split()[0]
+                self.task_number_n_answer = self.task_number_n['text'].split('_')[-1].split('ОТВЕТ')[1].split()[0]
     
     def update_task(self, answer, id_task):
         with connect(PATH_TO_DB_TASK) as db:
