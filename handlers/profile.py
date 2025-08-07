@@ -1,15 +1,17 @@
 from aiogram import Router, F, Bot
 from aiogram.types import Message, FSInputFile
+
 from filters.is_student import IsStudent
 from filters.is_teacher import IsTeacher
 from keyboards.global_menu import global_menu_student
 from utils.get_statistics_student import GetStatisticsStudent
 from utils.get_statistics_teacher import GetStatisticsTeacher
+from handlers.global_menu import GlobalMenu
 
 router_profile = Router()
 
 
-@router_profile.message(F.text == "Профиль", IsStudent())
+@router_profile.message(GlobalMenu.student)
 async def profile1(message: Message):
     statistics = GetStatisticsStudent(message.from_user.id)
     if statistics.number_of_task != 0:
@@ -27,7 +29,7 @@ async def profile1(message: Message):
 Ошибок: Вы не решали задания
     """, reply_markup=global_menu_student.markup)
 
-@router_profile.message(F.text == "Профиль", IsTeacher())
+@router_profile.message(GlobalMenu.teacher)
 async def profile2(message: Message):
     statistics = GetStatisticsTeacher(message.from_user.id)
     photo = FSInputFile('C:/Users/Олег/Pictures/tralyalya.png')

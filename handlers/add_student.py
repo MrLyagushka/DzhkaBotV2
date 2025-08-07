@@ -8,13 +8,14 @@ from aiogram.types import Message, ReplyKeyboardRemove
 from utils.update_all import Update
 from utils.get_student import GetStudent
 from keyboards.global_menu import global_menu_teacher
+from handlers.global_menu import GlobalMenu
 
 class AddStudent(StatesGroup):
     id_student = State()
 
 router_add_student = Router()
 
-@router_add_student.message(F.text == "Добавить ученика")
+@router_add_student.message(GlobalMenu.teacher)
 async def _add_student1(message: Message, state: FSMContext):
     await state.clear()
     await message.answer('Введите id ученика', reply_markup=ReplyKeyboardRemove())

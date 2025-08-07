@@ -5,6 +5,7 @@ from aiogram.types import Message
 
 from keyboards.add_task import keyboard_add_task
 from keyboards.choose_a_number_of_task import keyboard_list_a_number_of_task
+from handlers.global_menu import GlobalMenu
 
 router_add_task = Router()
 
@@ -14,7 +15,7 @@ class AddTask(StatesGroup):
     third = State()
 
 
-@router_add_task.message(F.text == 'Добавить тест')
+@router_add_task.message(GlobalMenu.teacher)
 async def add_task1(message: Message, state: FSMContext):
     await state.clear()
     await state.set_state(AddTask.first)

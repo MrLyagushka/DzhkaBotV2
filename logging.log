@@ -3558,3 +3558,26 @@ KeyError: 'choice1'
 INFO:aiogram.dispatcher:Polling stopped
 INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
 INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583352 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583353 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583354 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583355 is handled. Duration 204 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583356 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583357 is handled. Duration 156 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583358 is handled. Duration 109 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583359 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583360 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
