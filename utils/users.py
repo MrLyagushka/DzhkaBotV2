@@ -54,8 +54,8 @@ class Student():
             cursor = db.cursor()
             cursor.execute(f"SELECT answer FROM test WHERE id_student = {id_student}")
             answer = cursor.fetchall()
-        self.number_of_task = len(answer)
-        self.correct_answer = sum(map(lambda x: x[0], answer)) 
+            self.number_of_task = len(answer)
+            self.correct_answer = sum(map(lambda x: x[0], answer)) 
     
     def new_student(self, id: int):
         self.teacher = Teacher().teachers_id
@@ -64,7 +64,7 @@ class Student():
         if self.id not in self.teacher and id not in self.student:
             with connect(PATH_TO_DB_USERS) as db:
                 cursor = db.cursor()
-                cursor.execute(f"INSERT INTO student (id, idTeacher) VALUES ({id}, {0})")
+                cursor.execute(f"INSERT INTO student (id, id_teacher) VALUES ({id}, {0})")
                 db.commit()
 
     def check(self):
@@ -75,5 +75,5 @@ class Student():
     def update_student(self, id_teacher: int, id_student: int):
         with connect(PATH_TO_DB_USERS) as db:
             cursor = db.cursor()
-            cursor.execute(f"UPDATE student SET idTeacher = ? WHERE id = ?", (id_teacher, id_student))
+            cursor.execute(f"UPDATE student SET id_teacher = ? WHERE id = ?", (id_teacher, id_student))
             db.commit()

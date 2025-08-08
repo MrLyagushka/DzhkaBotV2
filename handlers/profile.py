@@ -12,7 +12,8 @@ router_profile = Router()
 
 @router_profile.message(GlobalMenu.student, F.text == "Профиль")
 async def profile1(message: Message):
-    statistics = Student.get_statistics(message.from_user.id)
+    statistics = Student()
+    statistics.get_statistics(message.from_user.id)
     if statistics.number_of_task != 0:
         await message.answer(f"""
 Никнейм: тута он будет\n
@@ -32,7 +33,7 @@ async def profile1(message: Message):
 async def profile2(message: Message):
     statistics = Teacher()
     statistics.get_statistics(message.from_user.id)
-    photo = FSInputFile('C:/Users/Олег/Pictures/tralyalya.png')
+    photo = FSInputFile('IMG_20241115_111513.jpg')
     if statistics.number_of_students != 0:
         await message.answer_photo(photo=photo, caption=f"""
 Никнейм: тута он будет
