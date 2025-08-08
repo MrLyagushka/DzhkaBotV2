@@ -6,6 +6,7 @@ from aiogram.types import Message
 from keyboards.add_task import keyboard_add_task
 from keyboards.choose_a_number_of_task import keyboard_list_a_number_of_task
 from handlers.global_menu import GlobalMenu
+from utils.template import DinamicKeyboard
 
 router_add_task = Router()
 
@@ -31,6 +32,6 @@ async def add_task2(message: Message, state: FSMContext):
 async def add_task3(message: Message, state: FSMContext):
     await state.update_data(choice2=message.text)
     choice1 = (await state.get_data())['choice1']
-    choice2 = (await state.get_data())['choice2']
-    print(choice1)
-    print(choice2)
+    choice2 = (await state.get_data())['choice2'].split('№')[1]
+    if choice1 == 'Банк заданий':
+        await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())

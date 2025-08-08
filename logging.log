@@ -4287,3 +4287,2159 @@ ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Cl
 WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
 INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
 INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583533 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583534 is handled. Duration 61 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583535 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583536 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583536 by bot id=7652131610
+AttributeError: 'NoneType' object has no attribute 'number'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt:{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 49, in generate_keyboard
+    self.button_list = TaskBank().get_task(number=int(self.button_info.split(':')[1])).number
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'number'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583537 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583538 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583539 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583540 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583541 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583542 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583543 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583543 by bot id=7652131610
+AttributeError: 'NoneType' object has no attribute 'number'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt:{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 50, in generate_keyboard
+    self.button_list = self.button_list.number
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'number'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583544 is handled. Duration 188 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583545 is handled. Duration 62 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583546 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583547 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583547 by bot id=7652131610
+TypeError: TaskBank.get_task() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt:{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 49, in generate_keyboard
+    self.button_list = TaskBank.get_task(number=int(self.button_info.split(':')[1]))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TaskBank.get_task() missing 1 required positional argument: 'self'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583548 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583549 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583550 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583551 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583551 by bot id=7652131610
+AttributeError: 'NoneType' object has no attribute 'number'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt:{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 50, in generate_keyboard
+    self.button_list = self.button_list.number
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'number'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583552 is handled. Duration 234 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583553 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583554 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583555 is not handled. Duration 16 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583555 by bot id=7652131610
+TypeError: tuple indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt:{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 54, in generate_keyboard
+    dinamic_keyboard.new_button(row_number=row+1, text=self.button_list[count]['text'],# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583556 is handled. Duration 188 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583557 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583558 is handled. Duration 109 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583559 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583559 by bot id=7652131610
+TypeError: tuple indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt:{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 55, in generate_keyboard
+    dinamic_keyboard.new_button(row_number=row+1, text=self.button_list[count]['text'],# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583560 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583561 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583562 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583563 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583563 by bot id=7652131610
+ValueError: Separator symbol ':' can not be used in value button_info='tt:5'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt:{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 59, in generate_keyboard
+    callback_data=MyCallbackData(callback_data='<', first_index=self.first_index, row=self.row, column=self.column, is_always_bigger=self.is_always_bigger_column_multiply_row, button_info=self.button_info, len_button_list=len(self.button_list)).pack())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\filters\callback_data.py", line 101, in pack
+    raise ValueError(
+ValueError: Separator symbol ':' can not be used in value button_info='tt:5'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583564 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583565 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583566 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583567 is not handled. Duration 16 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583567 by bot id=7652131610
+AttributeError: 'DinamicKeyboard' object has no attribute 'button_list'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 54, in generate_keyboard
+    print(self.button_list)
+          ^^^^^^^^^^^^^^^^
+AttributeError: 'DinamicKeyboard' object has no attribute 'button_list'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583568 is handled. Duration 250 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583569 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583570 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583571 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583571 by bot id=7652131610
+AttributeError: 'DinamicKeyboard' object has no attribute 'button_list'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 54, in generate_keyboard
+    dinamic_keyboard.new_button(row_number=row+1, text=self.button_list[count][6],# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
+                                                       ^^^^^^^^^^^^^^^^
+AttributeError: 'DinamicKeyboard' object has no attribute 'button_list'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583572 is handled. Duration 203 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583573 is handled. Duration 188 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583574 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583575 is handled. Duration 62 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583576 is handled. Duration 187 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583577 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583578 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583579 is handled. Duration 62 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583580 is handled. Duration 187 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583581 is handled. Duration 94 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583582 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583583 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583584 is handled. Duration 170 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583585 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583586 is handled. Duration 156 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583587 is handled. Duration 92 ms by bot id=7652131610
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Connection established (tryings = 1, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583588 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583589 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583590 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583591 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583592 is not handled. Duration 0 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583592 by bot id=7652131610
+TypeError: object of type 'int' has no len()
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 14, in on_the_what
+    first_index += 1 if len(callback_data.len_button_list) > first_index else len(callback_data.len_button_list)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'int' has no len()
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583593 is handled. Duration 171 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583594 is handled. Duration 188 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583595 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583596 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583597 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583598 is not handled. Duration 61 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583598 by bot id=7652131610
+TypeError: DinamicKeyboard.__init__() got an unexpected keyword argument 'len_button_list'
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 17, in on_the_what
+    reply_markup=DinamicKeyboard(row=callback_data.row,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DinamicKeyboard.__init__() got an unexpected keyword argument 'len_button_list'
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583599 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583600 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583601 is handled. Duration 1108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583602 is handled. Duration 217 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583603 is not handled. Duration 108 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583603 by bot id=7652131610
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 16, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583604 is handled. Duration 187 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583605 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583606 is handled. Duration 61 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583607 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583608 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583609 is handled. Duration 233 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583610 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583611 is handled. Duration 188 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583612 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583613 is handled. Duration 233 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583614 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583615 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583616 is handled. Duration 61 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583617 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583618 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583619 is handled. Duration 140 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583620 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583621 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583622 is handled. Duration 110 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583623 is handled. Duration 139 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583624 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583625 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583626 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583627 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583628 is handled. Duration 204 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583629 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583630 is handled. Duration 62 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583631 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583632 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583633 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583634 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583635 is handled. Duration 266 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583636 is handled. Duration 156 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583637 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583638 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583639 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583640 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583641 is handled. Duration 217 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583642 is handled. Duration 156 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583643 is handled. Duration 233 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583644 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583645 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583646 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583647 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583648 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583649 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583650 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583651 is handled. Duration 139 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583652 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583653 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583654 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583655 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583656 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583657 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583658 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583659 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583660 is handled. Duration 343 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583661 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583662 is handled. Duration 110 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583663 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583664 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583665 is not handled. Duration 125 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583665 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 20, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 27, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583666 is not handled. Duration 108 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583666 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 20, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 27, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583667 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583668 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583669 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583670 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583671 is handled. Duration 93 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583672 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583673 is handled. Duration 62 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583674 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583675 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583676 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583677 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583678 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583679 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583680 is not handled. Duration 108 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583680 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 21, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 28, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583681 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583682 is handled. Duration 139 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583683 is handled. Duration 203 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583684 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583685 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583686 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583687 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583688 is handled. Duration 218 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583689 is handled. Duration 391 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583690 is handled. Duration 405 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583691 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583692 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583693 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583694 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583695 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583696 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583697 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583698 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583699 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583700 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583701 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583702 is handled. Duration 61 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583703 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583704 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583705 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583706 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583707 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583708 is handled. Duration 171 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583709 is not handled. Duration 125 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583709 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 21, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 28, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583710 is not handled. Duration 141 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583710 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 21, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 28, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583711 is not handled. Duration 139 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583711 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 21, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 28, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583712 is handled. Duration 140 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583713 is not handled. Duration 125 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583713 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 21, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 28, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583714 is not handled. Duration 186 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583714 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 21, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 28, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583715 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583716 is not handled. Duration 139 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583716 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 21, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 28, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583717 is not handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583718 is handled. Duration 188 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583719 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583720 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583721 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583722 is handled. Duration 139 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583723 is handled. Duration 108 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583724 is not handled. Duration 15 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583725 is handled. Duration 218 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583726 is handled. Duration 62 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583727 is handled. Duration 61 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583728 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583729 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583730 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583731 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583732 is not handled. Duration 109 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583732 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 25, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 32, in on_the_what
+    logging.INFO(f'Ошибка: {e}')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583733 is handled. Duration 110 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583734 is handled. Duration 218 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583735 is handled. Duration 172 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583736 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583737 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583738 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583739 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583740 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583741 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583742 is not handled. Duration 125 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583742 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 25, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 32, in on_the_what
+    logging.INFO('Предел клавиатуры')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583743 is not handled. Duration 125 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583743 by bot id=7652131610
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 25, in on_the_what
+    await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\service_handlers.py", line 32, in on_the_what
+    logging.INFO('Предел клавиатуры')
+TypeError: 'int' object is not callable
+INFO:aiogram.event:Update id=898583744 is handled. Duration 110 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583745 is handled. Duration 187 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583746 is handled. Duration 63 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583747 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583748 is handled. Duration 109 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583749 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583750 is handled. Duration 139 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583751 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583752 is handled. Duration 45 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583753 is handled. Duration 47 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583754 is handled. Duration 46 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583755 is handled. Duration 94 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583756 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583757 is handled. Duration 156 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583758 is handled. Duration 312 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583759 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583760 is handled. Duration 46 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583761 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583762 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583763 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583764 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583765 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583766 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583767 is not handled. Duration 16 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583767 by bot id=7652131610
+ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=1, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+Traceback (most recent call last):
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\handlers\add_task.py", line 37, in add_task3
+    await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\template.py", line 53, in generate_keyboard
+    dinamic_keyboard.new_button(row_number=row+1, text=self.button_list[self.first_index+count][3],# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\utils\menu.py", line 30, in new_button
+    self.keyboard[row_number-1].append(InlineKeyboardButton(text=text, url=url, callback_data=callback_data))
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Олег\Desktop\Simple\DzhkaBotV2\DzhkaBotV2-1\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=1, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+INFO:aiogram.dispatcher:Polling stopped
+ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7652131610)
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583768 is handled. Duration 187 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583769 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583770 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583771 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583772 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583773 is handled. Duration 155 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583774 is handled. Duration 202 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583775 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583776 is handled. Duration 109 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583777 is handled. Duration 62 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583778 is handled. Duration 156 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583779 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583780 is handled. Duration 109 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583781 is handled. Duration 61 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583782 is handled. Duration 109 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583783 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583784 is handled. Duration 375 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583785 is handled. Duration 61 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583786 is handled. Duration 125 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583787 is handled. Duration 140 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583788 is not handled. Duration 0 ms by bot id=7652131610
