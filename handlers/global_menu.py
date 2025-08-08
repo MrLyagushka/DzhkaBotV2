@@ -41,12 +41,12 @@ async def _start(message: Message, state: FSMContext):
 async def _new_teacher_or_student(message: Message, state: FSMContext):
     await state.update_data(choice=message.text)
     if (await state.get_data())['choice'] == 'Я учитель':
-        if Teacher.new_teacher(message.from_user.id).check(message.from_user.id):
+        if Teacher().new_teacher(message.from_user.id).check():
             await message.answer('Вы зарегистрированы как учитель', reply_markup=global_menu_teacher.markup)
         else:
             await message.answer('Вы уже зарегистрированы в системе')
     else:
-        if Student.new_student(message.from_user.id).check(message.from_user.id):
+        if Student().new_student(message.from_user.id).check():
             await message.answer('Вы зарегистрированы как ученик', reply_markup=global_menu_student.markup)
         else:
             await message.answer('Вы уже зарегистрированы в системе')

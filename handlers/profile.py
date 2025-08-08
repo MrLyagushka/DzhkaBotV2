@@ -12,7 +12,8 @@ router_profile = Router()
 
 @router_profile.message(GlobalMenu.student, F.text == "Профиль")
 async def profile1(message: Message):
-    statistics = Student.get_statistics(message.from_user.id)
+    statistics = Student()
+    statistics.get_statistics(message.from_user.id)
     if statistics.number_of_task != 0:
         await message.answer(f"""
 Никнейм: тута он будет\n
