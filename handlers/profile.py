@@ -32,7 +32,7 @@ async def profile1(message: Message):
 async def profile2(message: Message):
     statistics = Teacher()
     statistics.get_statistics(message.from_user.id)
-    photo = FSInputFile('C:/Users/Олег/Pictures/tralyalya.png')
+    photo = FSInputFile('IMG_20241115_111513.jpg')
     if statistics.number_of_students != 0:
         await message.answer_photo(photo=photo, caption=f"""
 Никнейм: тута он будет
