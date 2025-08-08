@@ -6972,3 +6972,256 @@ INFO:aiogram.event:Update id=898583944 is handled. Duration 80 ms by bot id=7652
 INFO:aiogram.event:Update id=898583945 is handled. Duration 84 ms by bot id=7652131610
 INFO:aiogram.event:Update id=898583946 is handled. Duration 70 ms by bot id=7652131610
 INFO:aiogram.event:Update id=898583947 is handled. Duration 80 ms by bot id=7652131610
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583948 is handled. Duration 171 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583949 is handled. Duration 56 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583950 is handled. Duration 90 ms by bot id=7652131610
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583951 is handled. Duration 189 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583952 is handled. Duration 75 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583953 is handled. Duration 72 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583954 is handled. Duration 72 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583955 is handled. Duration 0 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583956 is handled. Duration 75 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583957 is handled. Duration 74 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583958 is handled. Duration 138 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583959 is handled. Duration 70 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583960 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583961 is handled. Duration 70 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583962 is handled. Duration 71 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583963 is handled. Duration 72 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583964 is handled. Duration 120 ms by bot id=7652131610
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583965 is handled. Duration 213 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583966 is handled. Duration 67 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583967 is handled. Duration 77 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583968 is handled. Duration 70 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583969 is handled. Duration 78 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583970 is handled. Duration 67 ms by bot id=7652131610
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583971 is handled. Duration 217 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583972 is handled. Duration 91 ms by bot id=7652131610
+INFO:root:Ошибка в функции _add_student: invalid literal for int() with base 10: 'f3r32'
+INFO:aiogram.event:Update id=898583973 is handled. Duration 70 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583974 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583975 is handled. Duration 70 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583976 is not handled. Duration 1 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583976 by bot id=7652131610
+NameError: name 'TaskBank' is not defined
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/add_task.py", line 38, in add_task3
+    button_list = TaskBank().get_task(number=int(self.button_info.split('_')[1]))
+NameError: name 'TaskBank' is not defined
+INFO:aiogram.event:Update id=898583977 is handled. Duration 141 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583978 is handled. Duration 69 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583979 is handled. Duration 76 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583980 is not handled. Duration 1 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583980 by bot id=7652131610
+NameError: name 'TaskBank' is not defined
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/add_task.py", line 38, in add_task3
+    button_list = TaskBank().get_task(number=int(self.button_info.split('_')[1]))
+NameError: name 'TaskBank' is not defined
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583981 is handled. Duration 184 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583982 is handled. Duration 67 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583983 is handled. Duration 69 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583984 is not handled. Duration 1 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583984 by bot id=7652131610
+NameError: name 'TaskBank' is not defined
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/add_task.py", line 38, in add_task3
+    button_list = TaskBank().get_task(number=int(self.button_info.split('_')[1]))
+NameError: name 'TaskBank' is not defined
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583985 is handled. Duration 175 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583986 is handled. Duration 122 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583987 is handled. Duration 82 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583988 is not handled. Duration 1 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898583988 by bot id=7652131610
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/add_task.py", line 40, in add_task3
+    button_list = TaskBank().get_task(number=int(self.button_info.split('_')[1]))
+NameError: name 'self' is not defined
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898583989 is handled. Duration 184 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583990 is handled. Duration 68 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583991 is handled. Duration 143 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583992 is handled. Duration 2 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583993 is handled. Duration 73 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583994 is handled. Duration 67 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583995 is handled. Duration 74 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583996 is handled. Duration 70 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583997 is handled. Duration 72 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583998 is handled. Duration 85 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898583999 is handled. Duration 80 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584000 is handled. Duration 65 ms by bot id=7652131610
