@@ -7,6 +7,9 @@ from keyboards.add_task import keyboard_add_task
 from keyboards.choose_a_number_of_task import keyboard_list_a_number_of_task
 from handlers.global_menu import GlobalMenu
 from utils.template import DinamicKeyboard
+from keyboards.global_menu import global_menu_teacher
+from utils.task_bank import TaskBank
+
 
 router_add_task = Router()
 
@@ -33,5 +36,12 @@ async def add_task3(message: Message, state: FSMContext):
     await state.update_data(choice2=message.text)
     choice1 = (await state.get_data())['choice1']
     choice2 = (await state.get_data())['choice2'].split('№')[1]
+
+    button_list = TaskBank().get_task(number=int(choice2))
+
     if choice1 == 'Банк заданий':
-        await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())
+        if len(button_list) == 0:
+            await message.answer("Тут пока пусто", reply_markup=global_menu_teacher.markup)
+            await state.set_state(GlobalMenu.teacher)
+        else:
+            await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())

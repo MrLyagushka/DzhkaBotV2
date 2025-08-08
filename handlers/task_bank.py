@@ -10,6 +10,8 @@ from filters.is_teacher import IsTeacher
 from keyboards.task_bank import choose_next_step
 from handlers.global_menu import GlobalMenu
 from utils.template import DinamicKeyboard
+from utils.task_bank import TaskBank
+from utils.users import Teacher, Student
 
 router_task_bank = Router()
 
@@ -33,7 +35,14 @@ async def see(message: Message, state: FSMContext):
     await state.update_data(choice2=message.text)
     choice1 = (await state.get_data())['choice1']
     choice2 = (await state.get_data())['choice2'].split('№')[1]
+
+    button_list = TaskBank().get_task(number=int(choice2))
+
     if choice1 == 'Посмотреть задания':
-        await message.answer("Выберите задание", reply_markup=DinamicKeyboard(1,3,'no',0,f'tt_{choice2}').generate_keyboard())
+        if len(button_list) == 0:
+            await message.answer("Тут пока пусто", reply_markup=global_menu_teacher.markup)
+            await state.set_state(GlobalMenu.teacher)
+        else:
+            await message.answer("Выберите задание", reply_markup=DinamicKeyboard(1,3,'no',0,f'tt_{choice2}').generate_keyboard())
 
     await state.set_state(GlobalMenu.teacher)
