@@ -9,6 +9,7 @@ from keyboards.choose_a_number_of_task import keyboard_list_a_number_of_task
 from filters.is_teacher import IsTeacher
 from keyboards.task_bank import choose_next_step
 from handlers.global_menu import GlobalMenu
+from utils.template import DinamicKeyboard
 
 router_task_bank = Router()
 
@@ -30,4 +31,9 @@ async def choose_number_task(message: Message, state: FSMContext):
 @router_task_bank.message(NumberTask.second)
 async def see(message: Message, state: FSMContext):
     await state.update_data(choice2=message.text)
+    choice1 = (await state.get_data())['choice1']
+    choice2 = (await state.get_data())['choice2'].split('№')[1]
+    if choice1 == 'Посмотреть задания':
+        await message.answer("Выберите задание", reply_markup=DinamicKeyboard(1,3,'no',0,f'tt_{choice2}').generate_keyboard())
+
     await state.set_state(GlobalMenu.teacher)
