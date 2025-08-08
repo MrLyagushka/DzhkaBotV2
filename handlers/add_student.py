@@ -42,8 +42,7 @@ async def _add_student2(message: Message, state: FSMContext):
         is_add = False
         for student in Student().student:
             if student[0] == id_student and student[1] == 0:
-                Update().update_poly_student_new_student(id_student=id_student, id_teacher=id_teacher)
-                Update().update_poly_teacher_new_student(id_teacher)
+                Student().set('int','id_teacher', id_teacher, id_student)
                 await message.answer('Ученик успешно добавлен', reply_markup=global_menu_teacher.markup)
                 await state.set_state(GlobalMenu.teacher)
                 is_add = True

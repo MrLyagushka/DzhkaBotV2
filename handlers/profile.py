@@ -17,6 +17,7 @@ async def profile1(message: Message):
     if statistics.number_of_task != 0:
         await message.answer(f"""
 Никнейм: тута он будет\n
+Id: {message.from_user.id} - скажи его своему преподавателю
 Процент правильных: {round(statistics.correct_answer / statistics.number_of_task * 100)}%
 Правильных: {statistics.correct_answer}
 Ошибок: {statistics.number_of_task - statistics.correct_answer}
@@ -36,7 +37,7 @@ async def profile2(message: Message):
     photo = FSInputFile('IMG_20241115_111513.jpg')
     if statistics.number_of_students != 0:
         await message.answer_photo(photo=photo, caption=f"""
-Никнейм: тута он будет
+ФИ: {statistics.name}
 Количество учеников: {statistics.number_of_students}
 Общий процент правильности: {round(statistics.correct_answer/statistics.number_of_task*100)}%
 
@@ -45,7 +46,7 @@ async def profile2(message: Message):
 """)
     else:
         await message.answer_photo(photo=photo, caption=f"""
-Никнейм: тута он будет
+ФИ: {statistics.name}
 Количество учеников: {statistics.number_of_students}
 Общий процент правильности: Вы не выдавали заданий
 

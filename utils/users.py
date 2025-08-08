@@ -1,4 +1,5 @@
 from sqlite3 import connect
+from typing_extensions import Literal
 
 from config import PATH_TO_DB_TASK, PATH_TO_DB_USERS
 
@@ -26,6 +27,8 @@ class Teacher():
             answer = cursor.fetchall()
             self.students_id = set(map(lambda x: x[0], cursor.fetchall()))
             self.number_of_students = len(self.students_id)
+            cursor.execute(f"SELECT name FROM teacher WHERE id = {id_teacher}")
+            self.name = cursor.fetchall()[0][0]
 
     def new_teacher(self, id: int):
         self.teacher = self.teachers_id
@@ -34,13 +37,22 @@ class Teacher():
         if self.id not in self.teacher and self.id not in self.student:
             with connect(PATH_TO_DB_USERS) as db:
                 cursor = db.cursor()
-                cursor.execute(f"INSERT INTO teacher (id, numbersOfStudent) VALUES ({id}, {0})")
+                cursor.execute(f"INSERT INTO teacher (id, name, date, description) VALUES ({id}, 'teacher', 01010001, 'description')")
                 db.commit()
 
     def check(self):
         if self.id not in self.teacher and self.id not in self.student:
             return True
         return False
+    
+    def set(self, format: Literal["str", "int"], column, value, id_teacher):
+        with connect(PATH_TO_DB_USERS) as db:
+            cursor = db.cursor()
+            if format == 'str':
+                cursor.execute(f"UPDATE teacher SET {column} = '{value}' WHERE id = {id_teacher}")
+            elif format == 'int':
+                cursor.execute(f"UPDATE teacher SET {column} = {value} WHERE id = {id_teacher}")
+            db.commit()
             
 class Student():
     def __init__(self):
@@ -64,7 +76,7 @@ class Student():
         if self.id not in self.teacher and id not in self.student:
             with connect(PATH_TO_DB_USERS) as db:
                 cursor = db.cursor()
-                cursor.execute(f"INSERT INTO student (id, id_teacher) VALUES ({id}, {0})")
+                cursor.execute(f"INSERT INTO student (id, id_teacher, class, name) VALUES ({id}, 0, 11, 'student')")
                 db.commit()
 
     def check(self):
@@ -76,4 +88,13 @@ class Student():
         with connect(PATH_TO_DB_USERS) as db:
             cursor = db.cursor()
             cursor.execute(f"UPDATE student SET id_teacher = ? WHERE id = ?", (id_teacher, id_student))
+            db.commit()
+    
+    def set(self, format: Literal["str", "int"], column, value, id_student):
+        with connect(PATH_TO_DB_USERS) as db:
+            cursor = db.cursor()
+            if format == 'str':
+                cursor.execute(f"UPDATE student SET {column} = '{value}' WHERE id = {id_student}")
+            elif format == 'int':
+                cursor.execute(f"UPDATE student SET {column} = {value} WHERE id = {id_student}")
             db.commit()
