@@ -9,7 +9,6 @@ from handlers.global_menu import GlobalMenu
 
 router_profile = Router()
 
-
 @router_profile.message(GlobalMenu.student, F.text == "Профиль")
 async def profile1(message: Message):
     statistics = Student()

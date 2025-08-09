@@ -7744,3 +7744,330 @@ INFO:aiogram.event:Update id=898584070 is handled. Duration 165 ms by bot id=765
 INFO:aiogram.event:Update id=898584071 is handled. Duration 105 ms by bot id=7652131610
 INFO:aiogram.event:Update id=898584072 is handled. Duration 79 ms by bot id=7652131610
 INFO:aiogram.event:Update id=898584073 is handled. Duration 95 ms by bot id=7652131610
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584074 is handled. Duration 192 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584075 is not handled. Duration 2 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898584075 by bot id=7652131610
+OperationalError: no such table: student
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/profile.py", line 16, in profile1
+    statistics.get_statistics(message.from_user.id)
+  File "/root/DzhkaBotV2/utils/users.py", line 71, in get_statistics
+    cursor.execute(f"SELECT name FROM student WHERE id = {id_student}")
+sqlite3.OperationalError: no such table: student
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584076 is not handled. Duration 1 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898584076 by bot id=7652131610
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/profile.py", line 39, in profile2
+    statistics.get_statistics(message.from_user.id)
+  File "/root/DzhkaBotV2/utils/users.py", line 31, in get_statistics
+    self.name = cursor.fetchall()[0][0]
+IndexError: list index out of range
+INFO:aiogram.event:Update id=898584077 is not handled. Duration 2 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898584077 by bot id=7652131610
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/profile.py", line 39, in profile2
+    statistics.get_statistics(message.from_user.id)
+  File "/root/DzhkaBotV2/utils/users.py", line 31, in get_statistics
+    self.name = cursor.fetchall()[0][0]
+IndexError: list index out of range
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584078 is handled. Duration 218 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584079 is not handled. Duration 2 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898584079 by bot id=7652131610
+OperationalError: no such table: student
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/profile.py", line 16, in profile1
+    statistics.get_statistics(message.from_user.id)
+  File "/root/DzhkaBotV2/utils/users.py", line 71, in get_statistics
+    cursor.execute(f"SELECT name FROM student WHERE id = {id_student}")
+sqlite3.OperationalError: no such table: student
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584080 is handled. Duration 689 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584081 is handled. Duration 152 ms by bot id=7652131610
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584082 is handled. Duration 218 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584083 is not handled. Duration 1 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898584083 by bot id=7652131610
+OperationalError: no such table: student
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/profile.py", line 15, in profile1
+    statistics.get_statistics(message.from_user.id)
+  File "/root/DzhkaBotV2/utils/users.py", line 71, in get_statistics
+    cursor.execute(f"SELECT name FROM student WHERE id = {id_student}")
+sqlite3.OperationalError: no such table: student
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584084 is handled. Duration 179 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584085 is not handled. Duration 1 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898584085 by bot id=7652131610
+OperationalError: no such table: test
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/profile.py", line 15, in profile1
+    statistics.get_statistics(message.from_user.id)
+  File "/root/DzhkaBotV2/utils/users.py", line 67, in get_statistics
+    cursor.execute(f"SELECT answer FROM test WHERE id_student = {id_student}")
+sqlite3.OperationalError: no such table: test
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584086 is handled. Duration 611 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584087 is handled. Duration 107 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584088 is handled. Duration 95 ms by bot id=7652131610
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584089 is handled. Duration 183 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584090 is handled. Duration 74 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584091 is handled. Duration 74 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584092 is handled. Duration 72 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584093 is handled. Duration 92 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584094 is handled. Duration 80 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584095 is handled. Duration 184 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584096 is handled. Duration 73 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584097 is handled. Duration 70 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584098 is handled. Duration 135 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584099 is handled. Duration 727 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584100 is handled. Duration 703 ms by bot id=7652131610
