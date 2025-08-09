@@ -56,7 +56,8 @@ async def _new_teacher_or_student(message: Message, state: FSMContext):
             await state.set_state(GlobalMenu.teacher)
     else:
         student = Student()
-        if student.new_student(message.from_user.id).check():
+        student.new_student(message.from_user.id)
+        if student.check():
             await message.answer('Введите ваше имя и фамилию, например Варя Черноус', reply_markup=ReplyKeyboardRemove())
             await state.set_state(GlobalMenu.second)
         else:

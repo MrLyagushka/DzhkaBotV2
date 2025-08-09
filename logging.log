@@ -7680,3 +7680,67 @@ ERROR:aiogram.dispatcher:Failed to fetch updates - TelegramNetworkError: HTTP Cl
 WARNING:aiogram.dispatcher:Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7443864418)
 INFO:aiogram.dispatcher:Polling stopped for bot @RassylkaRIBot id=7443864418 - 'Rassylka'
 INFO:root:Программа завершила работу по Ctrl + C
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584056 is handled. Duration 186 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584057 is handled. Duration 212 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584058 is handled. Duration 106 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584059 is handled. Duration 137 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584060 is handled. Duration 736 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584061 is handled. Duration 250 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584062 is handled. Duration 106 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584063 is handled. Duration 80 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584064 is handled. Duration 140 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584065 is handled. Duration 75 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584066 is not handled. Duration 2 ms by bot id=7652131610
+ERROR:aiogram.event:Cause exception while process update id=898584066 by bot id=7652131610
+AttributeError: 'NoneType' object has no attribute 'check'
+Traceback (most recent call last):
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/root/DzhkaBotV2/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/DzhkaBotV2/handlers/global_menu.py", line 59, in _new_teacher_or_student
+    if student.new_student(message.from_user.id).check():
+AttributeError: 'NoneType' object has no attribute 'check'
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Polling stopped for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.dispatcher:Polling stopped
+WARNING:aiogram.dispatcher:Received SIGTERM signal
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @dzshechkabot id=7652131610 - 'dzhka'
+INFO:aiogram.event:Update id=898584067 is handled. Duration 219 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584068 is handled. Duration 129 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584069 is handled. Duration 122 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584070 is handled. Duration 165 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584071 is handled. Duration 105 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584072 is handled. Duration 79 ms by bot id=7652131610
+INFO:aiogram.event:Update id=898584073 is handled. Duration 95 ms by bot id=7652131610
