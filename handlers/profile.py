@@ -16,7 +16,8 @@ async def profile1(message: Message):
     statistics.get_statistics(message.from_user.id)
     if statistics.number_of_task != 0:
         await message.answer(f"""
-Никнейм: тута он будет\n
+ФИ: {statistics.name}
+Класс обучения: {statistics.class_number}
 Id: {message.from_user.id} - скажи его своему преподавателю
 Процент правильных: {round(statistics.correct_answer / statistics.number_of_task * 100)}%
 Правильных: {statistics.correct_answer}
@@ -24,7 +25,9 @@ Id: {message.from_user.id} - скажи его своему преподават
     """, reply_markup=global_menu_student.markup)
     else:
         await message.answer(f"""
-Никнейм: тута он будет\n
+ФИ: {statistics.name}
+Класс обучения: {statistics.class_number}
+Id: {message.from_user.id} - скажи его своему преподавателю
 Процент правильных: Вы не решали задания
 Правильных: Вы не решали задания
 Ошибок: Вы не решали задания

@@ -68,6 +68,10 @@ class Student():
             answer = cursor.fetchall()
             self.number_of_task = len(answer)
             self.correct_answer = sum(map(lambda x: x[0], answer)) 
+            cursor.execute(f"SELECT name FROM student WHERE id = {id_student}")
+            self.name = cursor.fetchall()[0][0]
+            cursor.execute(f"SELECT class FROM student WHERE id = {id_student}")
+            self.class_number = cursor.fetchall()[0][0]
     
     def new_student(self, id: int):
         self.teacher = Teacher().teachers_id
