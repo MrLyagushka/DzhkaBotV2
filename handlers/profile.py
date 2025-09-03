@@ -1,5 +1,5 @@
 from aiogram import Router, F, Bot
-from aiogram.types import Message, FSInputFile
+from aiogram.types import Message
 
 from filters.is_student import IsStudent
 from filters.is_teacher import IsTeacher
@@ -36,9 +36,8 @@ Id: {message.from_user.id} - скажи его своему преподават
 async def profile2(message: Message):
     statistics = Teacher()
     statistics.get_statistics(message.from_user.id)
-    photo = FSInputFile('IMG_20241115_111513.jpg')
     if statistics.number_of_students != 0:
-        await message.answer_photo(photo=photo, caption=f"""
+        await message.answer(f"""
 ФИ: {statistics.name}
 Количество учеников: {statistics.number_of_students}
 Общий процент правильности: {round(statistics.correct_answer/statistics.number_of_task*100)}%
@@ -47,7 +46,7 @@ async def profile2(message: Message):
 Посмотреть статистику по ученикам:
 """)
     else:
-        await message.answer_photo(photo=photo, caption=f"""
+        await message.answer(f"""
 ФИ: {statistics.name}
 Количество учеников: {statistics.number_of_students}
 Общий процент правильности: Вы не выдавали заданий
