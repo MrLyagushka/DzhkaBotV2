@@ -45,3 +45,5 @@ async def add_task3(message: Message, state: FSMContext):
             await state.set_state(GlobalMenu.teacher)
         else:
             await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())
+    if choice1 == "Добавить задание":
+        await message.answer("Тут будут шаблоны для ввода своих заданий")

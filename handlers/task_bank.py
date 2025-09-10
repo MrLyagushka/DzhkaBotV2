@@ -5,6 +5,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import Message, CallbackQuery
 
+from keyboards.global_menu import global_menu_teacher
 from keyboards.choose_a_number_of_task import keyboard_list_a_number_of_task
 from filters.is_teacher import IsTeacher
 from keyboards.task_bank import choose_next_step
@@ -18,6 +19,7 @@ router_task_bank = Router()
 class NumberTask(StatesGroup):
     first = State()
     second = State()
+    third = State()
 
 @router_task_bank.message(GlobalMenu.teacher and F.text == "Банк заданий")
 async def task_bank(message: Message, state: FSMContext):
@@ -44,5 +46,15 @@ async def see(message: Message, state: FSMContext):
             await state.set_state(GlobalMenu.teacher)
         else:
             await message.answer("Выберите задание", reply_markup=DinamicKeyboard(1,3,'no',0,f'tt_{choice2}').generate_keyboard())
+
+    #await state.set_state(GlobalMenu.teacher)
+    await state.set_state(NumberTask.third)
+    
+
+@router_task_bank.callback_query(F.data == "callback_data", NumberTask.third)
+async def choice_task(message: Message, state: FSMContext):
+    #Вывод текста задания
+
+    #Блять, разберись с callback_data, надо понять как передаются данные о задании
 
     await state.set_state(GlobalMenu.teacher)

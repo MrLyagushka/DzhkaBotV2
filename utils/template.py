@@ -29,8 +29,6 @@ class DinamicKeyboard():
         всегда больше чем column*row или нет. И еще список кнопок.
         Формат button_info: st, ts, tt. Список учеников, список заданий у ученика, список заданий у учителя.
         st:id_teacher или ts:id_student или tt:number
-        :param column:
-        :param row:
         """
         self.first_index = first_index
         self.row = row
@@ -39,6 +37,9 @@ class DinamicKeyboard():
         self.button_info = button_info
 
     def generate_keyboard(self):
+        """
+        На будущее, тут можно вырать из трех режимов, так легче, чем указывать путь к файлу,
+          или что-то подобноею После выбора режима и ввода через :  id , """
         dinamic_keyboard = Menu('inline', self.row+1)
 
         if self.button_info.split('_')[0] == 'st':
@@ -46,7 +47,7 @@ class DinamicKeyboard():
         elif self.button_info.split('_')[0] == 'ts':
             self.button_list = Task().get_task(int(self.button_info.split('_')[1])).task_student
         elif self.button_info.split('_')[0] == 'tt':
-            self.button_list = TaskBank().get_task(number=int(self.button_info.split('_')[1]))
+            self.button_list = TaskBank().get_task(int(self.button_info.split('_')[1]))
         count = 0
         while count < self.row * self.column and self.first_index + count < len(self.button_list):
             row = count // self.column
