@@ -23,9 +23,9 @@ class Teacher():
 
         with connect(PATH_TO_DB_USERS) as db:
             cursor = db.cursor()
-            cursor.execute(f"SELECT * FROM student WHERE id = {id_teacher}")
+            cursor.execute(f"SELECT * FROM student WHERE id_teacher = {id_teacher}")
             answer = cursor.fetchall()
-            self.students_id = set(map(lambda x: x[0], cursor.fetchall()))
+            self.students_id = [str(x[0]) for x in answer]
             self.number_of_students = len(self.students_id)
             cursor.execute(f"SELECT name FROM teacher WHERE id = {id_teacher}")
             self.name = cursor.fetchall()[0][0]

@@ -37,7 +37,7 @@ async def see(message: Message, state: FSMContext):
     await state.update_data(choice2=message.text)
     choice1 = (await state.get_data())['choice1']
     choice2 = (await state.get_data())['choice2'].split('№')[1]
-
+ 
     button_list = TaskBank().get_task(number=int(choice2))
 
     if choice1 == 'Посмотреть задания':
@@ -47,14 +47,20 @@ async def see(message: Message, state: FSMContext):
         else:
             await message.answer("Выберите задание", reply_markup=DinamicKeyboard(1,3,'no',0,f'tt_{choice2}').generate_keyboard())
 
+    if choice1 == "Добавить задание":
+        await message.answer("Временно эта функция будет отсутствовать..")
     #await state.set_state(GlobalMenu.teacher)
     await state.set_state(NumberTask.third)
     
 
-@router_task_bank.callback_query(F.data == "callback_data", NumberTask.third)
-async def choice_task(message: Message, state: FSMContext):
+@router_task_bank.callback_query(F.data[:13] == "callback_data", NumberTask.third)
+async def choice_task(callback: CallbackQuery, state: FSMContext):
     #Вывод текста задания
-
+    choice2 = (await state.get_data())['choice2'].split('№')[1]
+    
+    task = TaskBank().get_task_with_id(choice2, int(callback.data.split('_')[3]))
+    await callback.answer()
+    await callback.message.answer(task[0][6], reply_markup=global_menu_teacher.markup)
     #Блять, разберись с callback_data, надо понять как передаются данные о задании
 
     await state.set_state(GlobalMenu.teacher)
