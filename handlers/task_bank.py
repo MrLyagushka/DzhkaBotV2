@@ -46,11 +46,12 @@ async def see(message: Message, state: FSMContext):
             await state.set_state(GlobalMenu.teacher)
         else:
             await message.answer("Выберите задание", reply_markup=DinamicKeyboard(1,3,'no',0,f'tt_{choice2}').generate_keyboard())
+            await state.set_state(NumberTask.third)
 
     if choice1 == "Добавить задание":
-        await message.answer("Временно эта функция будет отсутствовать..")
-    #await state.set_state(GlobalMenu.teacher)
-    await state.set_state(NumberTask.third)
+        await message.answer("Временно эта функция будет отсутствовать..", reply_markup=global_menu_teacher.markup)
+        await state.set_state(GlobalMenu.teacher)
+
     
 
 @router_task_bank.callback_query(F.data[:13] == "callback_data", NumberTask.third)
@@ -62,5 +63,6 @@ async def choice_task(callback: CallbackQuery, state: FSMContext):
     await callback.answer()
     await callback.message.answer(task[0][6], reply_markup=global_menu_teacher.markup)
     #Блять, разберись с callback_data, надо понять как передаются данные о задании
+    #Оставь запись выше как что-то атмосферное
 
     await state.set_state(GlobalMenu.teacher)

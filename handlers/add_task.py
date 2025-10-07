@@ -29,7 +29,6 @@ async def add_task1(message: Message, state: FSMContext):
     teacher = Teacher()
     teacher.get_statistics(message.from_user.id)
     number_of_student = teacher.number_of_students
-    print(number_of_student)
     if number_of_student == 0:
         await message.answer("У вас нет учеников, сначала добавьте минимум одного ученика, что бы разблокировать это меню", reply_markup=global_menu_teacher.markup)
         await state.set_state(GlobalMenu.teacher)
@@ -60,7 +59,7 @@ async def add_task3(message: Message, state: FSMContext):
             await message.answer('Выберите задание для отправки', reply_markup=DinamicKeyboard(1, 3, 'no', 0, f'tt_{choice2}').generate_keyboard())
             await state.set_state(AddTask.third)
     if choice1 == "Добавить задание":
-        await message.answer("Тут будут шаблоны для ввода своих заданий")
+        await message.answer("Тут будут шаблоны для ввода своих заданий", reply_markup=global_menu_teacher.markup)
         await state.set_state(GlobalMenu.teacher)
 
 
@@ -77,16 +76,11 @@ async def add_task4(callback: CallbackQuery, state: FSMContext):
 async def add_task5(callback: CallbackQuery, state: FSMContext, bot: Bot):
     choice2 = (await state.get_data())['choice2'].split('№')[1]
     choice3 = (await state.get_data())['choice3'].split('_')[3]
-
-    print(choice3)
-
     await callback.answer()
-
-    task = TaskBank().get_task_with_id(choice2, int(callback.data.split('_')[3]))
-    print(task)
-    new_task = Task().new_task(id_teacher=callback.message.chat.id, id_student=choice3, id_task=task[3], text=task[6])
+    task = (TaskBank().get_task_with_id(choice2, choice3))[0]
+    new_task = Task().new_task(id_teacher=callback.message.chat.id, id_student=int(callback.data.split('_')[3]), id_task=task[3], text=task[6])
     
-    await bot.send_message(chat_id=choice3, text='Привет, тебе пришло новое задание!')
-
+    await bot.send_message(chat_id=int(callback.data.split('_')[3]), text='Привет, тебе пришло новое задание!')
+    await callback.message.answer('Выбери действие', reply_markup=global_menu_teacher.markup)
+    await state.set_state(GlobalMenu.teacher)
     
-#Перезапусти и отладь task

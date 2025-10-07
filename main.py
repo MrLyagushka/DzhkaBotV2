@@ -11,13 +11,14 @@ from handlers.add_student import router_add_student
 from handlers.task_bank import router_task_bank
 from handlers.add_task import router_add_task
 from handlers.service_handlers import router_service_handlers
+from handlers.do_test import router_do_test
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 
 async def main():
-    dp.include_routers(router_command_start, router_add_task, router_profile, router_task_bank, router_add_student, router_service_handlers)
+    dp.include_routers(router_command_start, router_add_task, router_profile, router_task_bank, router_add_student, router_do_test, router_service_handlers)
     await dp.start_polling(bot)
 
 

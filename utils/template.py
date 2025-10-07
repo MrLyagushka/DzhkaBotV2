@@ -55,8 +55,16 @@ class DinamicKeyboard():
         count = 0
         while count < self.row * self.column and self.first_index + count < len(self.button_list):
             row = count // self.column
-            dinamic_keyboard.new_button(row_number=row+1, text=str(self.button_list[self.first_index+count][3]),# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
+            if self.button_info.split('_')[0] == 'st':
+                dinamic_keyboard.new_button(row_number=row+1, text=str(self.button_list[self.first_index+count]),# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
+                                        callback_data=f'callback_data_{self.button_info.split("_")[0]}_{self.button_list[self.first_index+count]}')
+            if self.button_info.split('_')[0] == 'ts':
+                dinamic_keyboard.new_button(row_number=row+1, text=str(self.button_list[self.first_index+count][2]),# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
                                         callback_data=f'callback_data_{self.button_info.split("_")[0]}_{self.button_list[self.first_index+count][3]}')
+            
+            else:
+                dinamic_keyboard.new_button(row_number=row+1, text=str(self.button_list[self.first_index+count][3]),# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
+                                            callback_data=f'callback_data_{self.button_info.split("_")[0]}_{self.button_list[self.first_index+count][3]}')
             count += 1
         if count <= self.row*self.column:
             dinamic_keyboard.new_button(row_number=self.row+1, text='<', # Т.к. в классе Menu, row_number идет от 0, для удобства пользования
