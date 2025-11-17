@@ -32,7 +32,7 @@ Id: {message.from_user.id} - скажи его своему преподават
 Ошибок: Вы не решали задания
     """, reply_markup=global_menu_student.markup)
 
-@router_profile.message(GlobalMenu.teacher and F.text == "Профиль")
+@router_profile.message(GlobalMenu.teacher, F.text == "Профиль")
 async def profile2(message: Message):
     statistics = Teacher()
     statistics.get_statistics(message.from_user.id)

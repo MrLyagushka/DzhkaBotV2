@@ -58,15 +58,14 @@ class DinamicKeyboard():
             if self.button_info.split('_')[0] == 'st':
                 dinamic_keyboard.new_button(row_number=row+1, text=str(self.button_list[self.first_index+count]),# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
                                         callback_data=f'callback_data_{self.button_info.split("_")[0]}_{self.button_list[self.first_index+count]}')
-            if self.button_info.split('_')[0] == 'ts':
+            elif self.button_info.split('_')[0] == 'ts':
                 dinamic_keyboard.new_button(row_number=row+1, text=str(self.button_list[self.first_index+count][2]),# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
                                         callback_data=f'callback_data_{self.button_info.split("_")[0]}_{self.button_list[self.first_index+count][3]}')
-            
-            else:
+            elif self.button_info.split('_')[0] == 'tt':
                 dinamic_keyboard.new_button(row_number=row+1, text=str(self.button_list[self.first_index+count][3]),# Т.к. в классе Menu, row_number идет от 0, для удобства пользования
                                             callback_data=f'callback_data_{self.button_info.split("_")[0]}_{self.button_list[self.first_index+count][3]}')
             count += 1
-        if count <= self.row*self.column:
+        if count == self.row*self.column:
             dinamic_keyboard.new_button(row_number=self.row+1, text='<', # Т.к. в классе Menu, row_number идет от 0, для удобства пользования
                                     callback_data=MyCallbackData(callback_data='<', first_index=self.first_index, row=self.row, column=self.column, is_always_bigger=self.is_always_bigger_column_multiply_row, button_info=self.button_info, len_button_list=len(self.button_list)).pack())
             dinamic_keyboard.new_button(row_number=self.row+1, text='>', callback_data=MyCallbackData(callback_data='>', first_index=self.first_index, row=self.row, column=self.column, is_always_bigger= self.is_always_bigger_column_multiply_row, button_info=self.button_info, len_button_list=len(self.button_list)).pack())

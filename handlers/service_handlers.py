@@ -18,10 +18,9 @@ async def on_the_what(callback: CallbackQuery, callback_data: MyCallbackData):
     first_index = callback_data.first_index
     if callback_data.callback_data == '<':
         first_index = first_index - 1 if first_index > 0 else first_index
-    if callback_data.callback_data == '>':
+    elif callback_data.callback_data == '>':
         first_index = first_index + 1 if callback_data.len_button_list > first_index + callback_data.row*callback_data.column else first_index
-
-    elif first_index != callback_data.first_index:
+    if first_index != callback_data.first_index:
         await callback.message.edit_reply_markup(inline_message_id=callback.inline_message_id,
                                              reply_markup=DinamicKeyboard(row=callback_data.row,
                                                                           column=callback_data.column,
