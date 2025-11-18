@@ -1,4 +1,9 @@
-BOT_TOKEN = '7652131610:AAFm7EHM96uOgvHurk3MR8tVFpxnDyjyChs'
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 PATH_TO_DB_USERS = "db/users.db"
 
